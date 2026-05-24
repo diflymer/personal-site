@@ -2,6 +2,8 @@
     height: 70px;
     padding: 14px 40px;
 
+    margin-bottom: 50px;
+
     display: flex;
     gap: 50px;
     justify-content: space-between;
@@ -10,28 +12,32 @@
     font-size: 16px;
     text-wrap: nowrap;
 
-    box-shadow: 0 5px 10px rgba(var(--main-color-rgb), 0.4);
+    box-shadow: 0 5px 10px rgb(0, 0, 0, 0.2), 0 5px 10px rgb(var(--main-color-rgb), 0.3);
 }
 
 .header nav {
     display: flex;
 }
 
-.header nav ul {
+.menu__list {
     display: flex;
     gap: 50px;
     align-items: center;
-
-    list-style: none;
 }
 
-.header nav ul li {}
+.header nav ul li.active{
+    color: white;
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    background-color: var(--main-color);
+    box-shadow: var(--inset-shadow);
+}
 
 .empty {
     width: 100%;
     border-radius: var(--border-radius);
     background-color: var(--main-color);
-    box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.4), inset -2px -2px 5px rgba(0, 0, 0, 0.4);
+    box-shadow: var(--inset-shadow);
 }
 
 .buttons {
@@ -41,11 +47,82 @@
 }
 
 .buttons button {
-    all: unset;
     cursor: pointer;
     padding: 0px 20px;
 }
 
 .buttons .loginButton{
     border-right: 1px solid #AAAAAA90;
+}
+
+.menu__mobile, .menu__burger{
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    .header nav ul.menu__list{
+        display: none;
+    }
+
+    .menu__mobile {
+        display: flex;
+
+        position: relative;
+    }
+
+    .menu__mobile__summary {
+        list-style: none;
+    }
+
+    .menu__burger{
+        
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 0 30px;
+
+        padding: 5px 0;
+        cursor: pointer;
+        
+    }
+    .menu__burger span{
+        display: block;
+        width: 40px;
+        height: 4px;
+        border-radius: 10px;
+        background-color: var(--main-color);
+    }
+
+    .dropdown_list{
+        background-color: #fff;
+        padding: 10px;
+        border: 1px solid #000;
+        border-radius: var(--border-radius);
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        box-shadow: var(--outset-shadow);
+
+        position: absolute;
+        top: 50px;
+        left: 0px;
+
+        z-index: 5;
+    }
+
+    .buttons {
+        font-size: 14px;
+    }
+    .buttons button {
+        padding: 0px 10px;
+    }
+
+    .empty {
+        display: none;
+    }
+
 }

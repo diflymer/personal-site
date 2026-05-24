@@ -1,0 +1,39 @@
+.social {
+
+    display: flex;
+    justify-content: space-between;
+
+    box-shadow: var(--inset-shadow);
+    padding: 30px 30px;
+}
+
+.social__text{
+    display: flex;
+    align-items: center;
+}
+
+.social__icons {
+    height: 100%;
+    display: flex;
+    gap: 20px;
+}
+
+.social__icons a{
+    height: 100%;
+}
+
+.social__icons img{
+    object-fit: contain;
+    height: 35px;
+    width: 35px;
+}
+
+.copyright{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    height: 80px;
+    background-color: #000;
+}
