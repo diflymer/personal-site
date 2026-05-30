@@ -24,6 +24,7 @@
 
 @media (max-width: 700px) {
     .projects__list{
-        padding: 0;
+        padding: 30px 0;
+        grid-template-columns: minmax(350px, 1fr);
     }
 }

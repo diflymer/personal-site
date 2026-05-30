@@ -69,7 +69,7 @@ export const Survey = () => {
     }
 
     return (
-        <section className={s.test + ' container'}>
+        <section className={s.test + ' container'} id="test">
             <h3 className={s.test__name}>Тест по знанию Данила</h3>
             {!isFinished ?
                 <>

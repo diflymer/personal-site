@@ -10,7 +10,7 @@ import { Project } from './components/Project/Project'
 export const Projects = () => {
 
     return (
-        <section className={s.projects}>
+        <section className={s.projects} id="projects">
             <h3 className={s.projects__h}>Мои проекты</h3>
             <div className={s.projects__list}>
                 <Project

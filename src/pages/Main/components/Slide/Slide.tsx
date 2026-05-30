@@ -16,7 +16,7 @@ export const Slide = () => {
 
     return (
         <>
-            <section className={'container ' + s.slide + ' ' + s.fadeout__horizontal}>
+            <section className={s.slide + ' ' + s.fadeout__horizontal}>
                 <h3 className={s.slide__h}>Технологии, которыми я владею:</h3>
                 <div className={s.slide__row}>
 
