@@ -29,7 +29,7 @@ export const Survey = () => {
 
     const [isFinished, setIsFinished] = useState(false);
 
-    const getAnswers = (currentQuestionIndex) => {
+    const getAnswers = (currentQuestionIndex: number) => {
         return questions[currentQuestionIndex].slice(1, -1);
     }
 
@@ -55,7 +55,7 @@ export const Survey = () => {
         }
     }
 
-    const handleAnswerChange = (value) => {
+    const handleAnswerChange = (value: number) => {
         setCurrentAnswerIndex(value);
     }
 
@@ -82,7 +82,7 @@ export const Survey = () => {
                                         name="answer"
                                         value={i + 1}
                                         checked={currentAnswerIndex == i + 1}
-                                        onChange={(e) => handleAnswerChange(e.target.value)}
+                                        onChange={(e) => handleAnswerChange(Number(e.target.value))}
                                     />
                                     {ans}
                                 </label>

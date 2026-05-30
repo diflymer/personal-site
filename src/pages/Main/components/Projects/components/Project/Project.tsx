@@ -1,6 +1,16 @@
 import s from './Project.module.css'
+import { type FC } from 'react'
 
-export const Project = ({ href, img, name, desc, techs, year }) => {
+type Props ={
+    href: string,
+    img: string,
+    name: string,
+    desc: string,
+    techs: Array<string>,
+    year: string
+}
+
+export const Project: FC<Props> = ({ href, img, name, desc, techs, year }) => {
 
     return (
         <a href={href} className={s.project}>
